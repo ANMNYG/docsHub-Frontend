@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-paper text-ink font-body antialiased;
+}
+
+/* 포커스 링: 키보드 접근성 */
+:focus-visible {
+  outline: 2px solid theme("colors.accent.DEFAULT");
+  outline-offset: 2px;
+}
+
+/* 마크다운 렌더링 영역 스타일 */
+.md-preview h1 {
+  @apply font-display text-2xl font-semibold text-ink mt-0 mb-4;
+}
+.md-preview h2 {
+  @apply font-display text-lg font-semibold text-ink mt-8 mb-3 pb-2 border-b border-line;
+}
+.md-preview h3 {
+  @apply font-mono text-sm font-medium text-accent-dark mt-6 mb-2 bg-accent-light inline-block px-2 py-1 rounded;
+}
+.md-preview p {
+  @apply text-sm leading-relaxed text-ink/90 mb-3;
+}
+.md-preview blockquote {
+  @apply border-l-2 border-amber pl-4 italic text-muted my-4;
+}
+.md-preview ul {
+  @apply list-disc list-inside text-sm mb-3 space-y-1;
+}
+.md-preview hr {
+  @apply border-line my-6;
+}
+.md-preview strong {
+  @apply font-mono font-semibold text-sm text-ink;
+}
+.md-preview code {
+  @apply font-mono text-xs bg-ink/5 px-1.5 py-0.5 rounded;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
