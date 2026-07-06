@@ -44,6 +44,42 @@ body {
 .md-preview code {
   @apply font-mono text-xs bg-ink/5 px-1.5 py-0.5 rounded;
 }
+.md-preview pre {
+  background: #12141C;
+  color: #F5F6F8;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.md-preview pre code {
+  background: transparent;
+  padding: 0;
+  color: #F5F6F8;
+}
+.md-preview table {
+  width: 100%;
+  font-size: 0.875rem;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+.md-preview th {
+  text-align: left;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6B7280;
+  border-bottom: 1px solid #DEE2E8;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+}
+.md-preview td {
+  border-bottom: 1px solid rgba(222,226,232,0.6);
+  padding: 0.5rem 1rem 0.5rem 0;
+  vertical-align: top;
+}
 
 @media (prefers-reduced-motion: reduce) {
   * {
