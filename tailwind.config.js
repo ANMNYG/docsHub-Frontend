@@ -4,30 +4,43 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#12141C",
-        paper: "#F5F6F8",
+        ink: "#1F2328",
+        canvas: "#F6F8FA",
         surface: "#FFFFFF",
-        line: "#DEE2E8",
-        muted: "#6B7280",
+        border: "#D8DEE4",
+        muted: "#6E7781",
+        sidebar: {
+          DEFAULT: "#0D1117",
+          border: "#21262D",
+          muted: "#8B949E",
+          hover: "#161B22",
+        },
         accent: {
-          DEFAULT: "#0E7C7B",
-          dark: "#0A5F5E",
-          light: "#E4F3F2",
+          DEFAULT: "#2563EB",
+          dark: "#1D4ED8",
+          soft: "#EFF6FF",
         },
-        amber: {
-          DEFAULT: "#E8A33D",
-          dark: "#B9791F",
-          light: "#FBF0DD",
+        format: {
+          swagger: "#2563EB",
+          postman: "#D97706",
+          insomnia: "#0D9488",
         },
-        danger: "#D64545",
+        danger: "#DC2626",
       },
       fontFamily: {
-        display: ["Sora", "system-ui", "sans-serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
+        display: ["Instrument Sans", "system-ui", "sans-serif"],
+        body: ["Instrument Sans", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       boxShadow: {
-        card: "0 1px 2px rgba(18,20,28,0.04), 0 1px 12px rgba(18,20,28,0.05)",
+        card: "0 1px 2px rgba(22,23,27,0.04), 0 1px 12px rgba(22,23,27,0.05)",
+      },
+      backgroundImage: {
+        "dot-grid":
+          "radial-gradient(circle, #D8DEE4 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "dot-grid": "16px 16px",
       },
     },
   },
