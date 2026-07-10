@@ -24,7 +24,7 @@ export function Sidebar({ items, onClear }: SidebarProps) {
           <path d="M18 8.5c1.2 0 1.9.7 1.9 1.8v1.4c0 .8.3 1.1.9 1.1v1.2c-.6 0-.9.3-.9 1.1v1.4c0 1.1-.7 1.8-1.9 1.8"
             stroke="#F6F8FA" strokeWidth="1.3" strokeLinecap="round" />
         </svg>
-        <span className="font-display text-[15px] font-semibold tracking-tight">DocsHub</span>
+        <span className="font-display text-[15px] font-semibold tracking-tight">SpecToDocs</span>
       </div>
 
       <div className="px-3">
