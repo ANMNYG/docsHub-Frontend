@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "ShopMate Postman 테스트",
+    "description": "Postman Collection 형식 파싱 테스트용 샘플입니다.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "회원",
+      "item": [
+        {
+          "name": "회원 목록 조회",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/members?page=0&size=10",
+              "path": ["api", "v1", "members"],
+              "query": [
+                { "key": "page", "value": "0", "description": "페이지 번호" },
+                { "key": "size", "value": "10", "description": "페이지당 개수" }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "성공 응답 예시",
+              "code": 200,
+              "body": "[{\"id\":1,\"email\":\"straw@gmail.com\",\"name\":\"김딸기\"}]"
+            }
+          ]
+        },
+        {
+          "name": "회원 가입",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/members",
+              "path": ["api", "v1", "members"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"straw@gmail.com\",\"name\":\"김딸기\",\"password\":\"abc123\"}"
+            }
+          },
+          "response": [
+            {
+              "name": "생성됨",
+              "code": 201,
+              "body": "{\"id\":1,\"email\":\"straw@gmail.com\",\"name\":\"김딸기\",\"createdAt\":\"2024-01-01T00:00:00Z\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "로그인",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/auth/login",
+          "path": ["api", "v1", "auth", "login"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"straw@gmail.com\",\"password\":\"abc123\"}"
+        }
+      },
+      "response": [
+        {
+          "name": "로그인 성공",
+          "code": 200,
+          "body": "{\"accessToken\":\"eyJhbGciOiJIUzI1NiJ9...\",\"expiresIn\":3600}"
+        }
+      ]
+    }
+  ]
+}
